@@ -1,0 +1,120 @@
+2024-11-27 16:16:31,032 - Starting anomaly detection system.
+2024-11-27 16:16:31,032 - Loading dataset from merged_Dataset_BearingTest_2.csv
+2024-11-27 16:16:31,043 - Data scaled successfully.
+2024-11-27 16:16:31,045 - Dimensionality reduction with PCA completed.
+2024-11-27 16:16:31,045 - Data partitioned into 100 parts.
+2024-11-27 16:16:31,046 - Starting Flower simulation.
+2024-11-27 16:16:31,046 - Pre-registering run with id 12953100610296187812
+2024-11-27 16:16:31,047 - Using InMemoryState
+2024-11-27 16:16:31,047 - Using InMemoryState
+2024-11-27 16:16:31,048 - Creating anomaly detection model with input shape 2.
+2024-11-27 16:16:31,049 - Buffer time delay: 5s
+2024-11-27 16:16:31,174 - Starting Flower ServerApp, config: num_rounds=3, no round_timeout
+2024-11-27 16:16:31,174 - 
+2024-11-27 16:16:31,175 - [INIT]
+2024-11-27 16:16:31,175 - Using initial global parameters provided by strategy
+2024-11-27 16:16:31,175 - Starting evaluation of initial global parameters
+2024-11-27 16:16:31,175 - Evaluation returned no results (`None`)
+2024-11-27 16:16:31,175 - 
+2024-11-27 16:16:31,175 - [ROUND 1]
+2024-11-27 16:16:36,053 - Using InMemoryState
+2024-11-27 16:16:36,054 - Registered 100 nodes
+2024-11-27 16:16:36,059 - Supported backends: ['ray']
+2024-11-27 16:16:36,059 - Initialising: RayBackend
+2024-11-27 16:16:36,059 - Backend config: {'init_args': {'logging_level': 30, 'log_to_driver': True}, 'client_resources': {'num_cpus': 2, 'num_gpus': 0}, 'actor': {'tensorflow': 0}}
+2024-11-27 16:16:37,179 - configure_fit: strategy sampled 2 clients (out of 100)
+2024-11-27 16:16:39,943 - Constructed ActorPool with: 8 actors
+2024-11-27 16:16:39,943 - Using InMemoryState
+2024-11-27 16:16:49,772 - aggregate_fit: received 2 results and 0 failures
+2024-11-27 16:16:49,775 - No fit_metrics_aggregation_fn provided
+2024-11-27 16:16:49,776 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:16:54,353 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:16:54,354 - 
+2024-11-27 16:16:54,354 - [ROUND 2]
+2024-11-27 16:16:54,355 - configure_fit: strategy sampled 10 clients (out of 100)
+2024-11-27 16:16:58,687 - aggregate_fit: received 10 results and 0 failures
+2024-11-27 16:16:58,703 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:17:03,653 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:17:03,654 - 
+2024-11-27 16:17:03,655 - [ROUND 3]
+2024-11-27 16:17:03,655 - configure_fit: strategy sampled 10 clients (out of 100)
+2024-11-27 16:17:07,746 - aggregate_fit: received 10 results and 0 failures
+2024-11-27 16:17:07,766 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:17:12,975 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:17:12,975 - 
+2024-11-27 16:17:12,975 - [SUMMARY]
+2024-11-27 16:17:12,976 - Run finished 3 round(s) in 41.80s
+2024-11-27 16:17:12,976 - 	History (loss, distributed):
+2024-11-27 16:17:12,976 - 		round 1: 0.021697794166975655
+2024-11-27 16:17:12,976 - 		round 2: 0.04138911930669565
+2024-11-27 16:17:12,976 - 		round 3: 0.04445470995793585
+2024-11-27 16:17:12,976 - 	History (metrics, distributed, evaluate):
+2024-11-27 16:17:12,976 - 	{'accuracy': [(1, 0.96), (2, 0.92), (3, 0.9)]}
+2024-11-27 16:17:12,976 - 
+2024-11-27 16:17:12,984 - ServerApp finished running.
+2024-11-27 16:17:12,984 - ServerApp finished running.
+2024-11-27 16:17:12,984 - Triggered stop event for Simulation Engine.
+2024-11-27 16:17:13,967 - Terminated 8 actors
+2024-11-27 16:17:15,567 - Terminated RayBackend
+2024-11-27 16:17:15,568 - Stopping Simulation Engine now.
+2024-11-27 16:17:15,569 - Flower simulation completed.
+2024-11-27 16:17:33,386 - Starting anomaly detection system.
+2024-11-27 16:17:33,386 - Loading dataset from merged_Dataset_BearingTest_2.csv
+2024-11-27 16:17:33,397 - Data scaled successfully.
+2024-11-27 16:17:33,399 - Dimensionality reduction with PCA completed.
+2024-11-27 16:17:33,399 - Data partitioned into 100 parts.
+2024-11-27 16:17:33,400 - Starting Flower simulation.
+2024-11-27 16:17:33,401 - Pre-registering run with id 3173041257067955567
+2024-11-27 16:17:33,401 - Using InMemoryState
+2024-11-27 16:17:33,401 - Using InMemoryState
+2024-11-27 16:17:33,402 - Creating anomaly detection model with input shape 2.
+2024-11-27 16:17:33,402 - Buffer time delay: 5s
+2024-11-27 16:17:33,531 - Starting Flower ServerApp, config: num_rounds=3, no round_timeout
+2024-11-27 16:17:33,532 - 
+2024-11-27 16:17:33,532 - [INIT]
+2024-11-27 16:17:33,532 - Using initial global parameters provided by strategy
+2024-11-27 16:17:33,532 - Starting evaluation of initial global parameters
+2024-11-27 16:17:33,532 - Evaluation returned no results (`None`)
+2024-11-27 16:17:33,532 - 
+2024-11-27 16:17:33,533 - [ROUND 1]
+2024-11-27 16:17:38,405 - Using InMemoryState
+2024-11-27 16:17:38,406 - Registered 100 nodes
+2024-11-27 16:17:38,408 - Supported backends: ['ray']
+2024-11-27 16:17:38,408 - Initialising: RayBackend
+2024-11-27 16:17:38,408 - Backend config: {'init_args': {'logging_level': 30, 'log_to_driver': True}, 'client_resources': {'num_cpus': 2, 'num_gpus': 0}, 'actor': {'tensorflow': 0}}
+2024-11-27 16:17:39,535 - configure_fit: strategy sampled 2 clients (out of 100)
+2024-11-27 16:17:42,274 - Constructed ActorPool with: 8 actors
+2024-11-27 16:17:42,274 - Using InMemoryState
+2024-11-27 16:17:51,974 - aggregate_fit: received 2 results and 0 failures
+2024-11-27 16:17:51,978 - No fit_metrics_aggregation_fn provided
+2024-11-27 16:17:51,978 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:17:56,549 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:17:56,550 - 
+2024-11-27 16:17:56,550 - [ROUND 2]
+2024-11-27 16:17:56,550 - configure_fit: strategy sampled 10 clients (out of 100)
+2024-11-27 16:18:00,927 - aggregate_fit: received 10 results and 0 failures
+2024-11-27 16:18:00,957 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:18:06,233 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:18:06,234 - 
+2024-11-27 16:18:06,234 - [ROUND 3]
+2024-11-27 16:18:06,235 - configure_fit: strategy sampled 10 clients (out of 100)
+2024-11-27 16:18:10,644 - aggregate_fit: received 10 results and 0 failures
+2024-11-27 16:18:10,655 - configure_evaluate: strategy sampled 50 clients (out of 100)
+2024-11-27 16:18:15,484 - aggregate_evaluate: received 50 results and 0 failures
+2024-11-27 16:18:15,485 - 
+2024-11-27 16:18:15,485 - [SUMMARY]
+2024-11-27 16:18:15,485 - Run finished 3 round(s) in 41.95s
+2024-11-27 16:18:15,485 - 	History (loss, distributed):
+2024-11-27 16:18:15,485 - 		round 1: 0.016481083289399977
+2024-11-27 16:18:15,485 - 		round 2: 0.013275443818420172
+2024-11-27 16:18:15,485 - 		round 3: 0.01359449846437201
+2024-11-27 16:18:15,486 - 	History (metrics, distributed, evaluate):
+2024-11-27 16:18:15,486 - 	{'accuracy': [(1, 0.94), (2, 0.94), (3, 0.92)]}
+2024-11-27 16:18:15,486 - 
+2024-11-27 16:18:15,495 - ServerApp finished running.
+2024-11-27 16:18:15,495 - ServerApp finished running.
+2024-11-27 16:18:15,495 - Triggered stop event for Simulation Engine.
+2024-11-27 16:18:16,412 - Terminated 8 actors
+2024-11-27 16:18:17,804 - Terminated RayBackend
+2024-11-27 16:18:17,805 - Stopping Simulation Engine now.
+2024-11-27 16:18:17,806 - Flower simulation completed.

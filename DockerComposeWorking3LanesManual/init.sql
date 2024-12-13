@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS my_table (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    value DECIMAL(10, 2)
+);
+
+LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/data.csv'
+INTO TABLE my_table
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;

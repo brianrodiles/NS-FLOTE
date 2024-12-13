@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  my-modbus-server1:
+    build:
+      context: .
+      dockerfile: DockerfileServer1.txt
+    container_name: serverModbus1
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.6
+    ports:
+      - "1024:1024"
+
+  my-modbus-server2:
+    build:
+      context: .
+      dockerfile: DockerfileServer2.txt
+    container_name: serverModbus2
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.7
+    ports:
+      - "1025:1025"
+
+  my-modbus-server3:
+    build:
+      context: .
+      dockerfile: DockerfileServer3.txt
+    container_name: serverModbus3
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.8
+    ports:
+      - "1026:1026"
+
+  my-modbus-client-write:
+    build:
+      context: .
+      dockerfile: DockerfileClientWrite.txt
+    container_name: clientDockerWrite
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.3
+    command: ["tail", "-f", "/dev/null"]  # Override CMD to keep the container running
+  
+  my-modbus-client-read:
+    build:
+      context: .
+      dockerfile: DockerfileClientRead.txt
+      args:
+        CPU_ARCH: x86-64
+        CPU_FLAGS: "-mavx -mavx2"
+    volumes:
+      - ./logs:/usr/src/app/logs
+    environment:
+      - LOG_PATH=/usr/src/app/logs
+    tty: true
+    container_name: clientDockerRead
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.5
+
+  scada:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scadadocker
+    networks:
+      my-network:
+        ipv4_address: 192.168.2.4
+    ports:
+      - "8080:8080"
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24

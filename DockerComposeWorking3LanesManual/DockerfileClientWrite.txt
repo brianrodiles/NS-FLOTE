@@ -1,0 +1,23 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install pymodbus==3.0.2
+
+WORKDIR /client
+
+COPY modbusClientWrite.py /client
+COPY data-part1.csv /client
+COPY data-part2.csv /client
+COPY data-part3.csv /client
+COPY run_clients.sh /client
+
+RUN chmod +x /client/run_clients.sh
+
+CMD ["/client/run_clients.sh"]

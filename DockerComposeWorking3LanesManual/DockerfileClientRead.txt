@@ -1,0 +1,35 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install pymodbus==3.0.2
+
+WORKDIR /client
+
+COPY modbusClientRead.py /client
+COPY combineCSV.py /client
+COPY run_read_clients.sh /client
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY app.py .
+COPY merged_Dataset_BearingTest_2.csv .
+
+# Create a logs directory in the container
+RUN mkdir /logs
+
+# Expose logs volume
+VOLUME /usr/src/app/logs
+
+RUN chmod +x /client/run_read_clients.sh
+
+CMD ["/client/run_read_clients.sh"]

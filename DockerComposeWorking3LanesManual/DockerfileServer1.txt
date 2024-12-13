@@ -1,0 +1,17 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install pymodbus==3.0.2
+
+WORKDIR /server
+
+COPY server.py /server
+
+CMD ["python3", "server.py", "192.168.2.6", "1024"]

@@ -1,0 +1,6 @@
+flwr[simulation]
+flwr-datasets
+flower
+tensorflow
+pandas
+scikit-learn
